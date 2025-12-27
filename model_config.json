@@ -1,0 +1,122 @@
+{
+  "model": {
+    "name": "Stack Overflow Salary Predictor",
+    "description": "Predicts developer salary based on education, location, experience, and version control usage",
+    "version": "1.0",
+    "model_file": "stackoverflow_salary_predict.pkl",
+    "type": "regression"
+  },
+  "features": [
+    {
+      "name": "FormalEducation",
+      "display_name": "Education Level",
+      "type": "categorical",
+      "required": true,
+      "options": [
+        "Bachelor's degree (BA. BS. B.Eng.. etc.)",
+        "Master's degree (MA. MS. M.Eng.. MBA. etc.)",
+        "levels_low_Bsc"
+      ],
+      "encoding": {
+        "0": "Bachelor's degree (BA. BS. B.Eng.. etc.)",
+        "1": "Master's degree (MA. MS. M.Eng.. MBA. etc.)",
+        "2": "levels_low_Bsc"
+      }
+    },
+    {
+      "name": "Country_encoded",
+      "display_name": "Country",
+      "type": "categorical",
+      "required": true,
+      "options": [
+        "United States",
+        "India",
+        "United Kingdom",
+        "Germany",
+        "Canada",
+        "France",
+        "Brazil",
+        "Netherlands",
+        "Australia",
+        "Poland",
+        "Spain",
+        "Russia",
+        "Sweden",
+        "Italy",
+        "Switzerland",
+        "Israel",
+        "Other"
+      ],
+      "encoding": {
+        "0": "Australia",
+        "1": "Brazil",
+        "2": "Canada",
+        "3": "France",
+        "4": "Germany",
+        "5": "India",
+        "6": "Israel",
+        "7": "Italy",
+        "8": "Netherlands",
+        "9": "Other",
+        "10": "Poland",
+        "11": "Russia",
+        "12": "Spain",
+        "13": "Sweden",
+        "14": "Switzerland",
+        "15": "United Kingdom",
+        "16": "United States"
+      }
+    },
+    {
+      "name": "VersionControl_encoded",
+      "display_name": "Version Control System",
+      "type": "categorical",
+      "required": true,
+      "options": [
+        "Git",
+        "other_version_of_git"
+      ],
+      "encoding": {
+        "0": "Git",
+        "1": "other_version_of_git"
+      }
+    },
+    {
+      "name": "Age",
+      "display_name": "Age",
+      "type": "numeric",
+      "required": true,
+      "min": 18,
+      "max": 65,
+      "scaling": {
+        "type": "minmax",
+        "min_value": 18,
+        "max_value": 65
+      }
+    },
+    {
+      "name": "Years Experience",
+      "display_name": "Years of Experience",
+      "type": "numeric",
+      "required": true,
+      "min": 0,
+      "max": 40,
+      "scaling": {
+        "type": "minmax",
+        "min_value": 0,
+        "max_value": 40
+      }
+    }
+  ],
+  "output": {
+    "name": "ConvertedSalary",
+    "display_name": "Predicted Salary",
+    "type": "numeric",
+    "unit": "USD",
+    "scaling": {
+      "type": "minmax",
+      "min_value": 0,
+      "max_value": 200000
+    }
+  }
+}
