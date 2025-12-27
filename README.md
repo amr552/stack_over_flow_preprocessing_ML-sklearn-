@@ -1,14 +1,39 @@
 # 🚀 ML Model Predictor - Web Application
 
-A beautiful, interactive web application for testing machine learning models. Currently configured for **Stack Overflow Salary Prediction**, but easily adaptable for any ML project.
 
+# Stack Overflow Salary Prediction (sklearn preprocessing)
+
+This is a small ML project where I practice **cleaning + feature engineering** on a “dirty” Stack Overflow–style dataset, then train regression models to predict **ConvertedSalary**.
+
+## What’s inside
+- Load and inspect the dataset (pandas)
+- Handle missing values (SimpleImputer)
+- Encode categorical columns (OneHotEncoder)
+- Scale numeric columns when needed (StandardScaler)
+- Train and compare a few models (baseline + others)
+- Evaluate with MAE / R²
+- Save the trained pipeline (preprocessing + model) so it can be reused later
+
+## Target
+- `ConvertedSalary`
+
+## Main features
+- Numeric: `Age`, `Years Experience`, `StackOverflowJobsRecommend`
+- Categorical: `FormalEducation`, `Hobby`, `Country/Region`, `VersionControl`, `Gender`
+
+## How to run
+1. Install requirements
+   ```bash
+   pip install -r requirements.txt
+
+<!--
+A beautiful, interactive web application for testing machine learning models. Currently configured for **Stack Overflow Salary Prediction**, but easily adaptable for any ML project.
 ![ML Model Predictor](https://img.shields.io/badge/ML-Predictor-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge)
 ![Flask](https://img.shields.io/badge/Flask-3.0-black?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
 ## ✨ Features
 
 - 🎨 **Premium Design** - Modern UI with glassmorphism, gradients, and smooth animations
@@ -24,7 +49,7 @@ A beautiful, interactive web application for testing machine learning models. Cu
 - Python 3.8 or higher
 - pip (Python package manager)
 - A trained machine learning model (`.pkl` file)
-
+<!--
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
@@ -258,7 +283,7 @@ This project is open source and available for educational and commercial use.
 - [ ] Model performance metrics display
 - [ ] Dark/Light theme toggle
 - [ ] Export predictions to CSV
-
+-->
 ## 💡 Tips for Best Results
 
 1. **Preprocessing** - Ensure your model's preprocessing matches the configuration
@@ -273,3 +298,4 @@ This project is open source and available for educational and commercial use.
 
 For questions or issues, please create an issue in the repository.
 "# stack_over_flow_preprocessing_ML-sklearn-" 
+-->
