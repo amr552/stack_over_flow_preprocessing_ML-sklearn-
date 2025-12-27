@@ -1,6 +1,3 @@
-# 🚀 ML Model Predictor - Web Application
-
-
 # Stack Overflow Salary Prediction (sklearn preprocessing)
 
 This is a small ML project where I practice **cleaning + feature engineering** on a “dirty” Stack Overflow–style dataset, then train regression models to predict **ConvertedSalary**.
